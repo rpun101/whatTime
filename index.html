@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>What time??</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            margin: 150px auto;
+            text-align: center;
+        }
+        #date, #time{
+            color: black;
+            font-size:6em;
+            margin: 0 auto;
+
+        }
+        #time{
+            color:rgba(160, 0, 0, 0.74);
+        }
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+    <script src="moment.js"></script>
+    
+</head>
+<body>
+    <div id="date">current date</div>
+    <div id="time">Current time</div>
+    <script>
+        $('div#date').html(moment().format("Do MMMM YYYY") + ",");
+        function updateclock(){
+            var currtime = moment().format('LTS');
+            $('div#time').html(currtime);
+            setTimeout(updateclock, 1000);
+        }
+        updateclock();
+        
+        </script>
+</body>
+
+
+</html>
