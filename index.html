@@ -10,11 +10,14 @@
             margin: 150px auto;
             text-align: center;
         }
-        #date, #time{
+        #date, #time, #day{
             color: black;
             font-size:6em;
             margin: 0 auto;
 
+        }
+        #day{
+            color: rgba(60, 29, 175, 0.74);
         }
         #time{
             color:rgba(160, 0, 0, 0.74);
@@ -28,10 +31,12 @@
     
 </head>
 <body>
-    <div id="date">current date</div>
     <div id="time">Current time</div>
+    <div id="day">Today</div>
+    <div id="date">current date</div>
     <script>
-        $('div#date').html(moment().format("Do MMMM YYYY") + ",");
+        $('div#date').html(moment().format("Do MMMM YYYY"));
+        $('div#day').html(moment().format("dddd") + ",");
         function updateclock(){
             var currtime = moment().format('LTS');
             $('div#time').html(currtime);
