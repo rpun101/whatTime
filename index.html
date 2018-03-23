@@ -39,6 +39,7 @@
         function updateclock(){
             var currtime = moment().format('LTS');
             $('div#time').html(currtime);
+            $('title').html(currtime);
             setTimeout(updateclock, 1000);
         }
         updateclock();

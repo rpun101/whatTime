@@ -8,7 +8,7 @@ I like having a clock run in one tab! Searching in the web didn't yield to my sa
 Maybe, in future, I might add some timer feature and play with the background. But for now, this does the trick!
 
 ## Todo Tasks ##
-+ [ ] Page title with timer
++ [X] Page title with timer
 + [ ] Add full-screen button
 
 ## Known Bug ##
